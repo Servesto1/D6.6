@@ -1,0 +1,29 @@
+
+{% extends 'default.html' %}
+
+
+{% block content %}
+{% if posts %}
+{%  %}
+<table>
+    <tr>
+        <td>Заголовок</td>
+        <td>Дата публикации</td>
+        <td>Содержание</td>
+        <td>Категория</td>
+    </tr>
+    {% for post in posts %}
+
+    <tr>
+        <td>{{ post.title }}</td>
+        <td>{{ post time_in }}</td>
+        <td>{{ post.text }}</td>
+        {% for cat  in post.category.all %}
+         <td>{{cat.name}}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<h3>Пубикаций нет !!!</h3>
+{% endif %}
+{% endblock content %}
