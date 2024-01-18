@@ -14,7 +14,7 @@
     </tr>
     <tr>
         <td>{{ post.title }}</td>
-        <td>{{ post time_in }}</td>
+        <td>{{ post time_in|date:'d M Y' }}</td>
         <td>{{ post.text }}</td>
         {% for cat  in post.category.all %}
          <td>{{ cat.name }}</td>
