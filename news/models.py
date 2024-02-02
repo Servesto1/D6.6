@@ -30,8 +30,8 @@ class Post(models.Model):
     news ='NE'
 
     POSITIONS = [
-        (article, 'РЎС‚Р°С‚СЊСЏ'),
-        (news, 'РќРѕРІРѕСЃС‚Рё'),
+        (article, 'Статья'),
+        (news, 'Новости'),
     ]
 
     post_time = models.DateTimeField(auto_now_add=True)
